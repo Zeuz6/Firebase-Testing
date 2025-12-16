@@ -28,8 +28,6 @@ const firebaseConfig = {
         .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
-          alert("Loging in...");
-          // ...
         })
         .catch((error) => {
           const errorCode = error.code;
