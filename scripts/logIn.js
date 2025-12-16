@@ -29,7 +29,6 @@ const firebaseConfig = {
           // Signed up 
           const user = userCredential.user;
           alert("Loging in...");
-          window.location.href = "signedIn.html"
           // ...
         })
         .catch((error) => {
