@@ -28,6 +28,7 @@ const firebaseConfig = {
         .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
+          window.location.href = 'signedIn.html';
         })
         .catch((error) => {
           const errorCode = error.code;
