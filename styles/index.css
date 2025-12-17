@@ -1,0 +1,77 @@
+body{
+  background-image: url(../images/background.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Arimo", sans-serif;
+  color: white;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 800px;    
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 325px;
+  height: 500px;
+  padding-top: 50px;
+  text-align: justify;
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+#input-container{
+  display: flex;
+  flex-direction: column;
+}
+#email, #password{
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 260px;
+  padding-left: 15px;
+  margin-bottom: 30px;
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+#email::placeholder, #password::placeholder{
+  color: white;
+  opacity: 1;
+}
+#email, #password{
+  color: white;
+  font-size: 15px;
+}
+h1{
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+#input-container h{
+  margin-bottom: 5px;
+  justify-content: left;
+}
+#create-account{
+  width: 279px;
+  border: none;
+  height: 44px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  margin-bottom: 20px;
+}
+#register{
+  color: white;
+}

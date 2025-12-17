@@ -2,13 +2,30 @@
 <html>
   <head>
     <title>Login Example</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Log In here</h1>
-    <input type="email" placeholder="Email" id="email" required>
-    <input type="password" placeholder="Password" id="password" required>
-    <button id="create-account">Create Account</button>
-    <a href="register.html">Register</a>
+    
+    <div id="container">
+      <h1>Login</h1>
+      <div id="input-container">
+        <h>Email</h>
+        <input type="email" placeholder="Email" id="email" required>
+      </div>
+      <div id="input-container">
+        <h>Password</h>
+        <input type="password" placeholder="Password" id="password" required>
+      </div>
+      <button id="create-account">Login</button>
+      <div>
+        <h>Dont have an account?</h>
+        <a id="register" href="register.html">Register</a>
+      </div>
+    </div>
+  
   </body>
   <script type="module">
     // Import the functions you need from the SDKs you need
