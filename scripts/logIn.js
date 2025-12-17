@@ -29,6 +29,7 @@ const firebaseConfig = {
           // Signed up 
           const user = userCredential.user;
           window.location.href = 'signedIn.html';
+              //changes
         })
         .catch((error) => {
           const errorCode = error.code;
