@@ -20,12 +20,14 @@ const logoutBtn = document.getElementById('logout');
 
 // Listen for logged-in user
 onAuthStateChanged(auth, (user) => {
-  if (user) {
-    message.textContent = `Signed in as "${user.email}"`;
-  } else {
-    // If not logged in, redirect back to login
+  if (!user) {
     window.location.href = "index.html";
+    return;
   }
+
+  const name = user.displayName;
+  const email = user.email;
+  message.textContent = `Signed in ${name}`;
 });
 
 logoutBtn.addEventListener("click", async () => {

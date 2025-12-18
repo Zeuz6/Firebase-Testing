@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, updateProfile  } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,24 +18,21 @@ const firebaseConfig = {
     
     const submit = document.getElementById('create-account');
 
-    submit.addEventListener("click", function(event) {
-      event.preventDefault();
+  submit.addEventListener("click", async (event) => {
+    event.preventDefault();
       
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const name = document.getElementById('name').value;
     
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed up 
-          const user = userCredential.user;
-          alert("Creating Account...");
-          window.location.href = "signedIn.html"
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          alert(errorMessage);
-          // ..
-      });
-    });
+    try{
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+      await updateProfile(userCredential.user, { displayName: name });
+
+      alert("Account created!");
+      window.location.href = "signedIn.html";
+    } catch (error) {
+      alert(error.message);
+    }
+  });

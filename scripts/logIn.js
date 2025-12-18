@@ -24,6 +24,7 @@ const firebaseConfig = {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     
+    
       signInWithEmailAndPassword (auth, email, password)
         .then((userCredential) => {
           // Signed up 
